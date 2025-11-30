@@ -45,7 +45,9 @@ Após iniciar os containers, você pode acessar os serviços através dos seguin
 | **Back-end API** | API REST (Spring Boot) | [http://localhost:8080](http://localhost:8080) |
 | **Swagger UI** | Documentação da API | [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) |
 
----
+
+| **Front-end (Produção)** | Aplicação Web (React) | [https://front-end-47id.onrender.com/](https://front-end-47id.onrender.com/) |
+| **Swagger UI (Produção)** | Documentação da API em produção | [https://desafio1-1.onrender.com/swagger-ui/index.html#/](https://desafio1-1.onrender.com/swagger-ui/index.html#/) |
 
 ## 📂 Estrutura do Projeto
 
