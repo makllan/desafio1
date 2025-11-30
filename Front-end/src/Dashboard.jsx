@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from './services/api';
 import logo from './assets/logo.png';
 
 function Dashboard() {
@@ -20,7 +20,7 @@ function Dashboard() {
     const handleCheckIn = async () => {
         if (!user) return;
         try {
-            const response = await axios.post(`http://localhost:8080/work/checkin/${user.id}`);
+            const response = await api.post(`/work/checkin/${user.id}`);
             alert('Check-in realizado com sucesso!');
             console.log(response.data);
         } catch (error) {
@@ -36,7 +36,7 @@ function Dashboard() {
     const handleCheckOut = async () => {
         if (!user) return;
         try {
-            const response = await axios.post(`http://localhost:8080/work/checkout/${user.id}`);
+            const response = await api.post(`/work/checkout/${user.id}`);
             setLastWork(response.data);
             alert(`Check-out realizado! Tempo trabalhado: ${response.data.formattedDuration}`);
         } catch (error) {
